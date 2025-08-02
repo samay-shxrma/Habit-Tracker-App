@@ -2,20 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:myapp/repository/widgets/uihelper.dart';
 
 class CartScreen extends StatefulWidget {
-  const CartScreen({super.key});
+  
+   CartScreen({super.key});
 
+  
   @override
   State<CartScreen> createState() => _CartScreenState();
 }
 
 class _CartScreenState extends State<CartScreen> {
+    final TextEditingController searchController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
           SizedBox(height: 40),
-          Stack(
+         Stack(
             children: [
               Container(
                 height: 190,
@@ -28,24 +32,23 @@ class _CartScreenState extends State<CartScreen> {
                       children: [
                         SizedBox(width: 20),
                         UiHelper.CustomText(
-                          text: "Blinkit",
+                          text: "Blinkit in",
                           fontweight: FontWeight.bold,
                           color: Colors.black,
                           fontsize: 15,
-                          fontfamily: "bold",textAlign: TextAlign.center,
+                          fontfamily: "bold",
                         ),
                       ],
                     ),
-
                     Row(
                       children: [
                         SizedBox(width: 20),
                         UiHelper.CustomText(
-                          text: "16 Minutes",
+                          text: "16 minutes",
                           fontweight: FontWeight.bold,
                           color: Colors.black,
                           fontsize: 20,
-                          fontfamily: "bold",textAlign: TextAlign.center,
+                          fontfamily: "bold",
                         ),
                       ],
                     ),
@@ -57,15 +60,14 @@ class _CartScreenState extends State<CartScreen> {
                           fontweight: FontWeight.bold,
                           color: Colors.black,
                           fontsize: 14,
-                          fontfamily: "bold",textAlign: TextAlign.center,
+                          fontfamily: "bold",
                         ),
-
                         UiHelper.CustomText(
                           text: "- Samay, Sihani, Ghaziabad (U.P)",
                           fontweight: FontWeight.w500,
                           color: Colors.black,
                           fontsize: 14,
-                          fontfamily: "regular",textAlign: TextAlign.center,
+                          fontfamily: "regular",
                         ),
                         SizedBox(width: 5),
                         Icon(Icons.arrow_drop_down),
@@ -74,7 +76,6 @@ class _CartScreenState extends State<CartScreen> {
                   ],
                 ),
               ),
-
               Positioned(
                 right: 20,
                 bottom: 85,
@@ -86,12 +87,12 @@ class _CartScreenState extends State<CartScreen> {
               ),
               Positioned(
                 left: 18,
+                right: 18,
                 bottom: 30,
-                child: UiHelper.CustomTextField(controller: SearchController()),
+                child: UiHelper.CustomTextField(controller: searchController),
               ),
             ],
           ),
-
           Expanded(
             child: SingleChildScrollView(
               child: Column(
@@ -104,19 +105,22 @@ class _CartScreenState extends State<CartScreen> {
                     fontweight: FontWeight.bold,
                     color: Colors.black,
                     fontsize: 16,
-                    fontfamily: "bold",textAlign: TextAlign.center,
+                    fontfamily: "bold",
+                    // textAlign: TextAlign.center,
                   ),
                   UiHelper.CustomText(
                     text: "Items you order will show up hear so you can buy",
                     fontweight: FontWeight.bold,
                     color: Colors.black,
-                    fontsize: 12,textAlign: TextAlign.center,
+                    fontsize: 12,
+                    // textAlign: TextAlign.center,
                     fontfamily: "bold",
                   ),
                   UiHelper.CustomText(
                     text: "them easily",
                     fontweight: FontWeight.bold,
-                    color: Colors.black,textAlign: TextAlign.center,
+                    color: Colors.black,
+                    // textAlign: TextAlign.center,
                     fontsize: 12,
                     fontfamily: "bold",
                   ),
@@ -128,7 +132,8 @@ class _CartScreenState extends State<CartScreen> {
                         text: "Bestsellars",
                         fontweight: FontWeight.bold,
                         color: Colors.black,
-                        fontsize: 16,textAlign: TextAlign.center,
+                        fontsize: 16,
+                        // textAlign: TextAlign.center,
                         fontfamily: "bold",
                       ),
                     ],
@@ -174,6 +179,7 @@ class _CartScreenState extends State<CartScreen> {
               ),
             ),
           ),
+          
         ],
       ),
     );

@@ -5,7 +5,7 @@ class UiHelper {
     return Image.asset("assets/images/$img");
   }
 
-  static CustomText({required String text, required FontWeight fontweight, required Color color, required double fontsize, required dynamic fontfamily, required TextAlign textAlign}){
+  static CustomText({required String text, required FontWeight fontweight, required Color color, required double fontsize, required dynamic fontfamily}){
     return  Text(
       text,
       style: TextStyle(
@@ -13,6 +13,7 @@ class UiHelper {
         fontFamily: fontfamily ?? "regular",
         fontWeight: fontweight,
         color: color,
+        
       ),
     );
   }
