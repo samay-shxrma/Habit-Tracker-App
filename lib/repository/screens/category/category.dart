@@ -41,7 +41,7 @@ class CategoryScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 40),
+          
           Stack(
             children: [
               Container(
@@ -118,11 +118,14 @@ class CategoryScreen extends StatelessWidget {
           ),
           // Scrollable content below
           Expanded(
+            
+
             child: SafeArea(
               top: false,
               child: SingleChildScrollView(
                 padding: const EdgeInsets.only(bottom: 20),
                 child: Column(
+                  
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: 30),

@@ -16,9 +16,10 @@ class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         children: [
-          SizedBox(height: 40),
+          
          Stack(
             children: [
               Container(
@@ -150,6 +151,7 @@ class _CartScreenState extends State<CartScreen> {
                             child: UiHelper.CustomButton(() {}),
                             padding: EdgeInsetsGeometry.only(top: 95, left: 66),
                           ),
+                          
                         ],
                       ),
                       SizedBox(width: 15),

@@ -16,7 +16,7 @@ class _PrintscreenState extends State<Printscreen> {
       backgroundColor: Color(0XFFFBF0CE),
       body: Column(
         children: [
-          SizedBox(height: 40),
+          
           Stack(
             children: [
               Container(
