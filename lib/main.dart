@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/Provider/transaction_provider.dart';
 import 'package:myapp/home.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,13 +17,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Blinkit',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true
+    return ChangeNotifierProvider(
+      create: (context)=> TransactionProvider(),
+      child: const MaterialApp(
+        home: const HomeScreen(),
       ),
-      home: const HomeScreen(),
+      
     );
   }
 }
