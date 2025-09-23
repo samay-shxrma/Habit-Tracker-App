@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Provider/transaction_provider.dart';
-import 'package:myapp/home.dart';
+import 'package:myapp/Provider/habit_provider.dart';
+import 'package:myapp/Screen/habit_list.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -17,12 +17,13 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context)=> TransactionProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_)=> HabitProvider())
+      ],
       child: const MaterialApp(
         home: const HomeScreen(),
       ),
-      
     );
   }
 }
