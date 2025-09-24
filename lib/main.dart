@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/Provider/voting_provider.dart';
-import 'package:myapp/Screen/voting_screen.dart';
-
+import 'package:myapp/Provider/habit_provider.dart';
+import 'package:myapp/Screen/habit_list.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -18,10 +17,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context)=> VotingProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_)=> HabitProvider())
+      ],
       child: const MaterialApp(
-        home: const VotingScreen(),
+        home: const HomeScreen(),
       ),
     );
   }
